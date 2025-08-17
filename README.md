@@ -1,7 +1,7 @@
 DMA-STGCRNN
 ---
 This repository contains the code used for the [paper](https://www.sciencedirect.com/science/article/abs/pii/S0957417425010802) entitled "Deep multi-attribute spatial–temporal graph convolutional recurrent neural
-network-based multivariable spatial–temporal information fusion for short-term probabilistic forecast of multi-site photovoltaic power".
+network-based multivariable spatial–temporal information fusion for short-term probabilistic forecast of multi-site photovoltaic power". This paper is published in Expert Systems with Applications journal. 
 
 Abstract
 ---
