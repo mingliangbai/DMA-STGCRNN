@@ -1,6 +1,6 @@
 DMA-STGCRNN
 ---
-This repository contains the code used for the [paper] (https://www.sciencedirect.com/science/article/abs/pii/S0957417425010802) entitled "Deep multi-attribute spatial–temporal graph convolutional recurrent neural
+This repository contains the code used for the [paper] [https://www.sciencedirect.com/science/article/abs/pii/S0957417425010802] entitled "Deep multi-attribute spatial–temporal graph convolutional recurrent neural
 network-based multivariable spatial–temporal information fusion for short-term probabilistic forecast of multi-site photovoltaic power".
 
 Abstract
@@ -30,8 +30,8 @@ For the detailed network structure, see 'models/DMA_STGCRNN.py'.
 Dataset
 ---
 The used PV power data are 11 stations in Belgium from January 1, 2021 to December 31, 2022 with a temporal resolution of 15 min, namely 96
-datapoints per day(availabel from https://
-www.elia.be/en/grid-data/power-generation/solar-pv-powergeneration-data). This paper uses multi-attribute spatial–temporal data for PV power 
+datapoints per day(availabel from [link] [https://
+www.elia.be/en/grid-data/power-generation/solar-pv-powergeneration-data]). This paper uses multi-attribute spatial–temporal data for PV power 
 forecast. Besides PV power, GHI, clear-sky GHI and air temperature are
 also used in forecast. McClear method is used to obtain GHI and clearsky GHI. Air
 temperature is obtained through ERA5 reanalysis data. The temporal resolution of ERA5 data is an hour, and thus this
@@ -48,7 +48,8 @@ Train
    If you want to train with one GPU, run the following command in the terminal: 
    ```bash
    python train_ddp.py --model_name DMA_STGCRNN --log_dir log --pred_len 16 --learning_rate 0.002 --hidden_num 240 --batch_size 512 --epoch 1000 --lrDecay 0.98 --ddp_training 'False'
-   
+   ```bash
+
    If you want to train with multiple GPUs (e.g: 4 GPUs), run the following command in the terminal: 
    ```bash
    torchrun --nproc_per_node 4 train_ddp.py --model_name DMA_STGCRNN --log_dir log --pred_len 16 --learning_rate 0.002 --hidden_num 240 --batch_size 512 --epoch 1000 --lrDecay 0.98 --ddp_training 'True'
