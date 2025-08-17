@@ -37,7 +37,7 @@ Train
    ```bash
    python train_ddp.py --model_name DMA_STGCRNN --log_dir log --pred_len 16 --learning_rate 0.002 --hidden_num 240 --batch_size 512 --epoch 1000 --lrDecay 0.98 --ddp_training 'False'
    ```
-   (2) If you want to train with one GPU, run the following command in the terminal:
+   (2) If you want to train with multiple GPUs (e.g., 4 GPUs), run the following command in the terminal:
    ```bash
    torchrun --nproc_per_node 4 train_ddp.py --model_name DMA_STGCRNN --log_dir log --pred_len 16 --learning_rate 0.002 --hidden_num 240 --batch_size 512 --epoch 1000 --lrDecay 0.98 --ddp_training 'True'
    ```
