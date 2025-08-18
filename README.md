@@ -30,7 +30,7 @@ Train
 ---
 1. Install packages using the command:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirement.txt
 2. Train the network
    
    (1) If you want to train with one GPU, run the following command in the terminal: 
@@ -47,7 +47,7 @@ To run the inference code, please follow the steps below:
 
 1. Install packages using the command
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirement.txt
 2. Run the 'inference.py' file.
    ```bash
    python  inference.py --model_name DMA_STGCRNN --log_dir log --pred_len 16 --hidden_num 240
